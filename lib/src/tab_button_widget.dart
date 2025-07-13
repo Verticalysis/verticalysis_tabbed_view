@@ -106,7 +106,6 @@ class TabButtonWidgetState extends State<TabButtonWidget> {
     }
 
     return MouseRegion(
-        cursor: SystemMouseCursors.click,
         onEnter: _onEnter,
         onExit: _onExit,
         child: GestureDetector(child: icon, onTap: onPressed));
