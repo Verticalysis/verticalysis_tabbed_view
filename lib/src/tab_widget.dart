@@ -81,13 +81,7 @@ class TabWidget extends StatelessWidget {
         decoration: decoration,
         margin: margin);
 
-    MouseCursor cursor = MouseCursor.defer;
-    if (provider.draggingTabIndex == null && status == TabStatus.selected) {
-      cursor = SystemMouseCursors.click;
-    }
-
     tabWidget = MouseRegion(
-        cursor: cursor,
         onEnter: (event) => updateHighlightedIndex(index),
         onExit: (event) => updateHighlightedIndex(null),
         child: provider.draggingTabIndex == null
